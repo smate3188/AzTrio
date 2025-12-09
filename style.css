@@ -1,0 +1,1686 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  }
+  
+body {
+    background-color: #c0c0c0;
+    color: #333;
+}
+
+/* --- HEADER ÜMUMİ --- */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #c0c0c0;
+    padding: 15px 50px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* --- LOGO --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.logo span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* --- MENU --- */
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.menu a:hover {
+    color: #000;
+}
+
+/* --- DROPDOWN --- */
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    z-index: 99;
+    margin-top: 10px;
+}
+.dropdown-content li {
+    list-style: none;
+}
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+}
+.dropdown-content a:hover {
+    background-color: #c0c0c0;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* --- USER SECTION --- */
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.user-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.user-link i {
+    font-size: 18px;
+}
+.user-link:hover {
+    color: #000;
+}
+
+/* Menyu Hissəsi */
+nav ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #000000;
+    border-bottom: 2px solid #000000; /* alt xətt effekt */
+}
+
+.icons span {
+    margin-left: 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Layout */
+main {
+    display: grid;
+    grid-template-columns: 250px 1fr 250px;
+    gap: 20px;
+    padding: 30px 50px;
+}
+
+/* Categories */
+.categories {
+    background-color: #c0c0c0; /* açıq boz fon */
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.categories h3 {
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.categories ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories li {
+    font-size: 16px;
+    color: #333333;
+    font-weight: 600;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+}
+
+.categories li:hover {
+    transform: translateX(5px);
+    color: #000000;
+}
+
+/* Banner */
+.big-banner {
+    background: linear-gradient(to right, #ffb6b9, #ff5a5f);
+    color: white;
+    border-radius: 10px;
+    padding; 50px;
+    text-align: left;
+}
+
+.big-banner h1 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.big-banner button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.big-banner button:hover {
+    background: #a7a2a275;
+}
+
+/* Side banners */
+.side-banners {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.small-banner {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.small-banner button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #333333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Services */
+.services {
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 20px 0;
+    margin: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.services div {
+    font-weight: 500;
+}
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+.user-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.user-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.user-link i {
+    font-size: 18px;
+}
+
+.user-link:hover {
+    color: #000;
+}
+.categories a {
+    color: #000  !important; /* Qara rəng */
+    text-decoration: none !important; /* Alt xətti silir */
+    font-weight: 500 !important; /* Yazını bir az qalın edir (istəsən 600 da yaza bilərik) */
+}
+
+.categories a:hover {
+    color: #555 !important; /* Mişqanı gətirəndə boz ton */
+}
+.banner {
+    width: 900px; /* tam genişlik */
+    height: 500px; /* istəsən artırmaq və ya azaltmaq olar */
+    background-image: url("images/kolleksiya.jpg"); /* buraya öz şəkil yolunu yaz */
+    background-size: cover; /* tam ekranı tutsun */
+    background-position: center center; /* ortadan yerləşsin */
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Yazıların görünüşü */
+.banner-content {
+    position: absolute;
+    color: #363636; /* tünd boz rəngdə yazı */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6); /* şəffaf ağ fon */
+    padding: 30px 50px;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+}
+
+.banner-content h1 {
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.banner-content .eng {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.banner-content .az {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.banner-content button {
+    background-color: #cacaca;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.banner-content button:hover {
+    background-color: #8f8e8e;
+}.navbar {
+  background-color: #f5f5f5;
+  padding: 15px 40px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+}
+
+.menu li a:hover {
+  color: #555;
+}
+.home-products {
+    padding: 40px 20px;
+    background: #f4f4f4;
+}
+  
+.home-products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+  
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Məhsul kartı */
+.product-card {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Məhsul şəkli */
+.product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Yaşıl badge – Təbii məhsul */
+.product-badge {
+    background: #4caf50;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/* Məhsul adı */
+.product-card h3 {
+    font-size: 17px;
+    margin: 10px 0 5px 0;
+}
+
+/* Reyting */
+.rating {
+    font-size: 15px;
+    color: #ff9800;
+    margin-bottom: 8px;
+}
+
+.rating span {
+    color: #555;
+    margin-left: 5px;
+}
+
+/* Qiymət */
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.price span {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Narıncı Səbətə əlavə et düyməsi */
+.add-to-cart {
+    background: #05050588;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 8px;
+    transition: 0.2s;
+}
+
+.add-to-cart:hover {
+    background: #ff5722;
+}
+.products-banner {
+    max-width: 1100px;
+    margin: 0 auto 42px;
+  }
+  
+  .products-banner img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+  }
+.banner-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+    padding: 18px 30px;
+    border-radius: 14px;
+    background: #8f8e8e;
+}
+/* GİRİŞ SƏHİFƏSİ */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+  }
+  
+  .login-box {
+    background: #fff;
+    padding: 35px;
+    width: 100%;
+    max-width: 380px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .login-box h2 {
+    margin-bottom: 6px;
+  }
+  
+  .login-box p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .login-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .login-box button {
+    width: 100%;
+    padding: 12px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .login-box button:hover {
+    background: #000;
+  }
+  
+  .login-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .login-links a {
+    font-size: 13px;
+    color: #555;
+    text-decoration: none;
+  }
+  
+  .login-links a:hover {
+    text-decoration: underline;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+
+  .cart-page {
+    max-width: 1180px;
+    margin: 20px auto;
+    padding: 10px;
+    font-family: sans-serif;
+  }
+  
+  .cart-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .login-hint {
+    background: #fff9e6;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  .login-hint a { color: #e67700; font-weight: 600; }
+  
+  .cart-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Left */
+  .cart-left {
+    width: 68%;
+  }
+  
+  .seller-box {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 14px;
+    border-radius: 8px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .seller-name { font-weight: 600; }
+  .seller-rate { background: #e9fff2; color: #13893c; padding: 4px 8px; border-radius: 6px; }
+  
+  /* Cart item */
+  .cart-item {
+    display: flex;
+    gap: 16px;
+    background: #fff;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+  }
+  
+  .cart-img {
+    width: 90px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .item-info {
+    flex: 1;
+  }
+  .item-name {
+    font-size: 15px;
+    margin: 0 0 6px;
+  }
+  .delivery {
+    font-size: 13px;
+    color: #3a7f37;
+    margin-bottom: 14px;
+  }
+  
+  .qty-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .qty-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .qty-count { font-weight: 600; }
+  
+  /* Price area */
+  .item-price {
+    text-align: right;
+  }
+  .discounted {
+    font-size: 18px;
+    color: #e8590c;
+    font-weight: 700;
+  }
+  .saved span {
+    color: #13893c;
+    font-weight: 600;
+  }
+  .remove-btn {
+    background: none;
+    border: none;
+    margin-top: 8px;
+    color: #d00000;
+    cursor: pointer;
+  }
+  
+  /* Recommendations */
+  .reco-title {
+    margin: 20px 0 10px;
+    font-size: 18px;
+  }
+  .reco-list {
+    display: flex;
+    gap: 10px;
+  }
+  .reco-item {
+    width: 120px;
+    height: 160px;
+    background: #f3f3f3;
+    border-radius: 10px;
+  }
+  
+  /* Right side */
+  .cart-right {
+    width: 32%;
+  }
+  
+  .coupon-box {
+    background: #fff;
+    padding: 16px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .coupon-box input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+  }
+  .apply-btn {
+    background: #ff7a00;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  .coupon-info {
+    margin-top: 8px;
+    color: #ff7a00;
+    font-weight: 600;
+  }
+  
+  /* Summary */
+  .summary-box {
+    background: #fff;
+    padding: 16px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+  }
+  .summary-box h3 {
+    margin-bottom: 14px;
+  }
+  .sum-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .green { color: #13893c; }
+  
+  .sum-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  
+  .checkout-btn {
+    margin-top: 16px;
+    background: #ff7a00;
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Responsive */
+  @media(max-width: 900px){
+    .cart-content { flex-direction: column; }
+    .cart-left, .cart-right { width: 100%; }
+  }
+  /* ==== TRENDYOL STİLLİ SƏBƏT DİZAYNI ==== */
+
+.cart-left {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background: #fff;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.25s ease;
+  }
+  
+  .cart-item:hover {
+    transform: scale(1.01);
+  }
+  
+  .cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #eee;
+  }
+  
+  .cart-item h4 {
+    font-size: 17px;
+    margin-bottom: 5px;
+    color: #222;
+  }
+  
+  .cart-item p {
+    font-size: 14px;
+    color: #555;
+    margin: 4px 0;
+  }
+  
+  /* + - sahəsi */
+  .cart-item div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .cart-item span {
+    font-weight: bold;
+    font-size: 15px;
+  }
+  
+  .cart-item button {
+    cursor: pointer;
+  }
+  
+  .cart-item .minus,
+  .cart-item .plus {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: #f8f8f8;
+    font-size: 18px;
+    transition: 0.2s;
+  }
+  
+  .cart-item .plus:hover {
+    background: #4caf50;
+    color: white;
+  }
+  
+  .cart-item .minus:hover {
+    background: #ff9800;
+    color: white;
+  }
+  
+  /* Sil düyməsi */
+  .cart-item .remove {
+    background: none;
+    border: none;
+    color: #e00000;
+    font-weight: bold;
+    margin-left: auto;
+    font-size: 14px;
+  }
+  
+  .cart-item .remove:hover {
+    text-decoration: underline;
+  }
+  
+  /* ÜMUMİ QİYMƏT */
+  #total {
+    font-size: 24px;
+    color: #050505;
+    font-weight: 800;
+  }
+  .cart-wrapper {
+    display: flex;
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .cart-right {
+    width: 340px;
+    background: #fff;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    height: fit-content;
+  }
+  
+  .cart-right h3 {
+    margin-bottom: 14px;
+  }
+  
+  .sum-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  
+  .sum-total {
+    font-size: 20px;
+    font-weight: 800;
+    color: #333333a8;
+  }
+  
+  .checkout-btn {
+    margin-top: 16px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: #3b3b3a;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .checkout-btn:hover {
+    background: #35343386;
+  }
+  .cart-icon {
+    position: relative;
+  }
+  
+  .cart-count {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background: #ff5722;
+    color: white;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+  }
+  .coupon-box {
+    margin-bottom: 18px;
+  }
+  
+  .coupon-box input {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  .apply-btn {
+    width: 100%;
+    padding: 8px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .apply-btn:hover {
+    background-color: #3b8a42;
+  }
+  
+  #couponMessage {
+    margin-top: 5px;
+    font-size: 13px;
+  }
+  .checkout-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .popup-content input {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .confirm-order {
+    background: #ff7a00;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+  }
+  
+  .close-popup {
+    background: #ddd;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+  }
+  /* === SƏBƏT SƏHİFƏSİ ÜÇÜN SOFT GRADIENT FON === */
+  body.cart-bg {
+    min-height: 100vh !important;
+    background:
+      radial-gradient(circle at 80% 20%, #b3d9ff 0%, transparent 40%),
+      radial-gradient(circle at 20% 80%, #ffd6a5 0%, transparent 45%),
+      linear-gradient(135deg, #eef2f7, #dde3ea) !important;
+    background-attachment: fixed;
+  }
+/* ==== PAYMENT POPUP ==== */
+
+.payment-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .payment-box {
+    width: 330px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+    animation: pop 0.25s ease;
+  }
+  
+  @keyframes pop {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  .payment-box h2 {
+    margin-bottom: 15px;
+  }
+  
+  .payment-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 15px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .row {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .pay-btn {
+    width: 100%;
+    padding: 12px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .pay-btn:hover {
+    background: #2563eb;
+  }
+  
+  .cancel-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background: #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .support-section {
+    padding: 60px 20px;
+    background: #c0c0c0;
+    text-align: center;
+  }
+  
+  .support-section h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .support-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  
+  .support-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  
+  .support-box h3 {
+    margin-bottom: 15px;
+  }
+  
+  .support-box input,
+  .support-box textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .support-box button {
+    width: 100%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+/* ==== GERİ QAYTARMA SƏHİFƏSİ ==== */
+
+.return-page {
+  min-height: 100vh;
+  padding: 60px 20px;
+}
+
+.return-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.return-wrapper h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.return-intro {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 35px;
+}
+
+.return-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.return-card {
+  background: #f5f5f5;
+  padding: 25px;
+  border-radius: 14px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.return-card h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.return-card ul {
+  padding-left: 18px;
+}
+
+.return-card li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+/* ==== YENİ PROFESSSIONAL GERİ QAYTARMA DİZAYNI ==== */
+
+.return-page {
+  min-height: 100vh;
+  padding: 60px 20px;
+}
+
+  
+
+/* Üst böyük banner */
+.return-hero {
+  background: linear-gradient(to right, #5c5959, #a7a7a7);
+  color: white;
+  padding: 70px 20px;
+  text-align: center;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.return-hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.return-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.return-wrapper {
+  max-width: 1100px;
+  margin: -60px auto 0;
+  padding: 20px;
+}
+
+/* Kartlar */
+.return-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+.return-card {
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.return-card:hover {
+  transform: translateY(-6px);
+}
+
+.return-card .icon {
+  font-size: 38px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.return-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.return-card p,
+.return-card li {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.return-card ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.return-card li::before {
+  content: "✔ ";
+  color: #4caf50;
+  font-weight: bold;
+}
+/* ===== TRENDYOL TİPLİ SLIDER ===== */
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 320px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease;
+  transform: scale(1.05);
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* OX DÜYMƏLƏRİ */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 28px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.slider-btn.left {
+  left: 15px;
+}
+
+.slider-btn.right {
+  right: 15px;
+}
+
+.slider-btn:hover {
+  background: rgba(0,0,0,0.8);
+}
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-height: 80px;
+}
+.return-form-btn-box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* sağ tərəfə atır */
+  margin-top: 25px;
+}
+
+.return-form-btn {
+  background: #3f3e3e;
+  color: white;
+  padding: 14px 30px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: 0.2s ease;
+}
+
+.return-form-btn:hover {
+  background: #79b5fa;
+}
+/* ==== ƏLAQƏ SƏHİFƏSİ ==== */
+
+.contact-page {
+  min-height: 100vh;
+  padding: 60px 20px;
+}
+
+.contact-hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-hero h1 {
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.contact-hero p {
+  color: #444;
+  font-size: 16px;
+}
+
+.contact-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.contact-info,
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.contact-info h3,
+.contact-form h3 {
+  margin-bottom: 18px;
+}
+
+.contact-info p {
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.contact-info h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.contact-form textarea {
+  min-height: 90px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #3f3e3e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #79b5fa;
+}
+
+@media (max-width: 800px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+.popup-content textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-height: 70px;
+  resize: vertical;
+}
+.big-popup {
+  width: 420px !important;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.cart-icon i {
+  display: inline-block !important;
+  font-size: 20px;
+  color: #333 !important;
+}
+/* ============================= */
+/* ✅ TELEFON (RESPONSIVE) DÜZƏLİŞ */
+/* ============================= */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  header {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 16px;
+    text-align: center;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .user-section {
+    justify-content: center;
+    gap: 18px;
+    margin-top: 8px;
+  }
+
+  /* SLIDER */
+  .slider-container {
+    height: 200px;
+    margin: 20px auto;
+  }
+
+  /* MƏHSULLAR */
+  .products-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .product-card img {
+    height: 120px;
+  }
+
+  .product-card h3 {
+    font-size: 15px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .add-to-cart {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* SƏBƏT SƏHİFƏSİ */
+  .cart-wrapper {
+    flex-direction: column;
+  }
+
+  .cart-left,
+  .cart-right {
+    width: 100%;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cart-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* POPUPLAR */
+  .popup-content,
+  .payment-box {
+    width: 90%;
+  }
+
+  /* GERİ QAYTARMA */
+  .return-hero h1 {
+    font-size: 26px;
+  }
+
+  /* DƏSTƏK */
+  .support-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+/* 📱 MOBİL UYĞUNLUQ */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 40px;
+    height: auto;
+  }
+
+  .logo span {
+    font-size: 18px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  h1, h2, h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .products-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* ✅ HEADER ÜMUMİ DÜZƏLİŞ */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: #cfcfcf;
+  flex-wrap: wrap;
+}
+
+/* ✅ LOGO HİSSƏSİ */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  width: 36px;
+  height: auto;
+}
+
+.logo span {
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* ✅ MENYU */
+.menu {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* ✅ USER HİSSƏSİ */
+.user-section {
+  display: flex;
+  gap: 10px;
+}
+
+.user-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+/* ✅ MOBİL TAM FIX */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .menu li a {
+    font-size: 13px;
+  }
+
+  .user-section {
+    margin-top: 6px;
+  }
+}
+
+
